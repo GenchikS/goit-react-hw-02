@@ -1,0 +1,14 @@
+.containerOptions{
+    display: block;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.textButton{
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+    margin-left: 8px;
+    background-color: rgb(252, 231, 205);
+}

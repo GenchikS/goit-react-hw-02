@@ -1,0 +1,13 @@
+.containerFeedback{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.textFeedback{
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+    margin: 8px 0 8px 0;
+}
