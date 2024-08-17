@@ -1,12 +1,11 @@
 import css from "./options.module.css"
 
-export default function Options() {
+export default function Options({ value, update }) {
     return (
-        <div className={css.containerOptions}>
-        <button className={css.textButton}>Good</button>
-        <button className={css.textButton}>Neutral</button>
-        <button className={css.textButton}>Bad</button>
-        <button className={css.textButton}>Reset</button>
-        </div>
-    )
+    <div className={css.containerOptions}>
+      <button onClick={update} className={css.textButton}>
+        {value}
+            </button>
+     </div>
+  );
 }
