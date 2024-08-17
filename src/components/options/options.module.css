@@ -12,3 +12,12 @@
     color: black;
     background-color: rgb(252, 231, 205);
 }
+
+.textButtonReset{
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+    background-color: rgb(252, 231, 205);
+    margin-left: 24px;
+}
