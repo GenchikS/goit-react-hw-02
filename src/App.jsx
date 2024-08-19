@@ -6,14 +6,22 @@ import Options from './components/options/options'
 import Notification from './components/notification/Notification'
 
 function App() {
-  const [count, setCount] = useState({
-    good: 0,
-    neutral: 0,
-    bad: 0,
+
+  const [count, setCount] = useState(() => {
+    const savedCount = window.localStorage.getItem("saved-count");
+    if (savedCount !== null) {
+      console.log("savedClicks", savedCount);
+      return JSON.parse(savedCount);
+    }
+
+    return {
+        good: 0,
+        neutral: 0,
+        bad: 0,
+  };
   })
-
-
-  const { good, neutral, bad } = count;
+  
+ const { good, neutral, bad } = count;
   const totalFeedback = good + neutral + bad;
   const updateFeedback = (countType) => {
     setCount({
@@ -24,10 +32,6 @@ function App() {
 
   useEffect(() => {
     window.localStorage.setItem("saved-count", JSON.stringify(count));
-    const savedClicks = window.localStorage.getItem("saved-count");
-    if (savedClicks !== null) {
-      // console.log("savedClicks", savedClicks);
-    }
     }, [count]);
 
   const resetClick = () => {
