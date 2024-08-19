@@ -1,8 +1,9 @@
 .containerOptions{
-    display: inline-flex;
-    margin-left: 24px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 16px;
     margin-bottom: 32px;
-
+    justify-content: left;
 }
 
 .textButton{
@@ -11,6 +12,7 @@
     line-height: 1.2;
     color: black;
     background-color: rgb(252, 231, 205);
+    margin-left: 16px;
 }
 
 .textButtonReset{
