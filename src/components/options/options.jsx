@@ -9,8 +9,7 @@ function Reset({ onResetClick }) {
 }
 
 export default function Options({ totalFeedback, onDateClick, onResetClick }) {
-  console.log("totalFeedback", totalFeedback);
-
+  // console.log("totalFeedback", totalFeedback);
   return (
     <div className={css.containerOptions}>
       <button onClick={() => onDateClick("good")} className={css.textButton}>

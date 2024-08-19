@@ -10,7 +10,7 @@ function App() {
   const [count, setCount] = useState(() => {
     const savedCount = window.localStorage.getItem("saved-count");
     if (savedCount !== null) {
-      console.log("savedClicks", savedCount);
+      // console.log("savedClicks", savedCount);
       return JSON.parse(savedCount);
     }
 
