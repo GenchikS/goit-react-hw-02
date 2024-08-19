@@ -10,7 +10,8 @@ function App() {
     good: 0,
     neutral: 0,
     bad: 0,
-  });
+  })
+
 
   const { good, neutral, bad } = count;
   const totalFeedback = good + neutral + bad;
@@ -23,15 +24,11 @@ function App() {
 
   useEffect(() => {
     window.localStorage.setItem("saved-count", JSON.stringify(count));
-  }, [count]);
-
-  // useEffect(() => {
-  //   window.localStorage.setItem("saved-neutral", neutral);
-  // }, [neutral]);
-
-  // useEffect(() => {
-  //   window.localStorage.setItem("saved-bad", bad);
-  // }, [bad]);
+    const savedClicks = window.localStorage.getItem("saved-count");
+    if (savedClicks !== null) {
+      // console.log("savedClicks", savedClicks);
+    }
+    }, [count]);
 
   const resetClick = () => {
     setCount({
@@ -40,8 +37,6 @@ function App() {
       bad: 0,
     });
   };
-
- 
 
 return (
   <>
